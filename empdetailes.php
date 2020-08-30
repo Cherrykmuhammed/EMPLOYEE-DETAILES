@@ -14,6 +14,8 @@
 	$mysqli=new mysqli('localhost','root','','empdetailes') or die(mysqli_error($mysqli));
 	$result=$mysqli->query("SELECT * FROM users") or die($mysqli->error);
 	?>
+	<a href="add.html"  class="btn btn-primary"<?php ; ?>
+				>Add</a>
 	<div class="row justify-content-center">
 		<table class="table">
 			<thead>
@@ -62,27 +64,9 @@
 	
 	
 	?>
-	<div class="row justify-content-center">
-		<form action="empdetailes.php" method="POST">
-		<div class="form-group">
-		<label>Name</label>
-		<input type="text" name="name" class="form-control" required>
-		</div>
-		<div class="form-group">
-		<label>Address</label>
-		<input type="text" name="address" class="form-control" required>
-		</div>
-		<div class="form-group">
-		<label>Salary</label>
-		<input type="number_format" name="salary" class="form-control" required>
-		</div>
-		<div class="form-group">
-		<button type="submit" class="btn btn-primary "name="add">Add</button>
-		</div>
-		</form>
+	
 	</div>
-	</div>
-
+	
 
 
 </body>
